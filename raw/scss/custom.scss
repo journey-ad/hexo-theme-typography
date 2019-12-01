@@ -166,6 +166,10 @@ a[target="_blank"] img {
   cursor: alias;
 }
 
+.v .vwrap {
+  background: #fff9;
+}
+
 /*Hide download button for HTML5 audio and video element in chrome*/
 audio::-internal-media-controls-download-button,
 video::-internal-media-controls-download-button {
