@@ -32,17 +32,23 @@ $(document).ready(function () {
     $(window).resize(function () {
         updateSidebar();
     });
+    updateView()
+});
+
+function updateView() {
     updateSidebar();
     $('#main-container').removeClass('invisible');
     $('#main-container').addClass('fadeInTop');
     if (window.innerWidth <= 768) {
         $('#side-bar').removeClass('invisible');
         $('#side-bar').addClass('fadeInTop');
-    }else{
+    } else {
         $('#side-bar').removeClass('invisible');
         $('#side-bar').addClass('fadeInRight');
     }
     $('.site-title').click(function () {
         $('.site-title a')[0].click();
     })
-});
+}
+
+module.exports = updateView

@@ -1,27 +1,73 @@
-$backgroundColor: #ffffff;
-$foregroundColor: #2e405b;
-$fontList: "Source Sans Pro", "Roboto", "Helvetica", "Helvetica Neue",
-  "Source Han Sans SC", "Source Han Sans TC", "PingFang SC", "PingFang HK",
-  "PingFang TC", sans-serif;
-$titleFontList: "HiraMinProN-W6", "Source Han Serif CN", "Source Han Serif SC",
-  "Source Han Serif TC", serif;
+$backgroundColor: #fafafa;
+$foregroundColor: #606975;
+$fontList: 'Josefin Sans Light',
+-apple-system,
+BlinkMacSystemFont,
+"Helvetica Neue",
+"PingFang SC",
+"'Hiragino Sans GB",
+STHeiti,
+"Microsoft Yahei",
+"Source Han Sans SC",
+"Noto Sans CJK SC",
+"WenQuanYi Micro Hei",
+Arial,
+Verdana,
+sans-serif;
+$fontListSerif: 'Source Han Serif CN',
+'Source Han Serif SC',
+'Source Han Serif',
+'source-han-serif-sc',
+'Noto Serif SC',
+'Noto Serif',
+'noto-serif-sc',
+'PT Serif',
+'SongTi SC',
+serif;
+$titleFontList: "HiraMinProN-W6",
+"Source Han Serif CN",
+"Source Han Serif SC",
+"Source Han Serif TC",
+serif;
 $verticalPrimaryPaddingTopPatch: 0;
 $verticalSecondaryPaddingTopPatch: 1px;
 @import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:100,300,400,600");
+@import url("https://fonts.googleapis.com/css?family=Noto+Serif+SC:100,300,400,600");
 @import "animation";
 
-html,
-body,
-span,
-p,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-family: $fontList;
-  color: $foregroundColor;
+html {
+
+  body,
+  span,
+  p,
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: $fontList;
+    color: $foregroundColor;
+  }
+
+  &.serif {
+
+    body,
+    span,
+    p,
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      font-family: $fontListSerif;
+    }
+  }
+}
+
+.fa {
+  font-family: FontAwesome;
 }
 
 html {
@@ -72,10 +118,12 @@ body {
   font-size: 18px;
   line-height: 1.5em;
 
-  @if lightness($backgroundColor) >50 {
-    background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAwAAAAMCAYAAABWdVznAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAACFJREFUeNpiZGBg4GegAsBlCD8TqSYNQg2Mo6FEBAAIMACdPABtrSW/IQAAAABJRU5ErkJggg==");
-  } @else {
-    background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAwAAAAMCAYAAABWdVznAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAACJJREFUeNpi/P//Py8DpQCXISBxJlING4QaGEdDiQgAEGAAg8sST3LGZYoAAAAASUVORK5CYII=");
+  @if lightness($backgroundColor)>50 {
+    // background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAwAAAAMCAYAAABWdVznAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAACFJREFUeNpiZGBg4GegAsBlCD8TqSYNQg2Mo6FEBAAIMACdPABtrSW/IQAAAABJRU5ErkJggg==");
+  }
+
+  @else {
+    // background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAwAAAAMCAYAAABWdVznAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAACJJREFUeNpi/P//Py8DpQCXISBxJlING4QaGEdDiQgAEGAAg8sST3LGZYoAAAAASUVORK5CYII=");
   }
 
   background-repeat: repeat;
@@ -84,6 +132,18 @@ body {
   -moz-osx-font-smoothing: grayscale;
   text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.04);
   min-height: 100vh;
+
+  &::before {
+    content: '';
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    opacity: .04;
+    position: fixed;
+    background: center/cover no-repeat;
+    background-image: url(/images/bg_1.jpg);
+  }
 }
 
 .container {
@@ -305,9 +365,11 @@ a {
     border-bottom: solid transparent 2px;
 
     &:hover {
-      @if lightness($foregroundColor) >50 {
+      @if lightness($foregroundColor)>50 {
         color: darken($foregroundColor, 10%) !important;
-      } @else {
+      }
+
+      @else {
         color: lighten($foregroundColor, 10%) !important;
       }
 
@@ -317,9 +379,11 @@ a {
     }
 
     &:focus {
-      @if lightness($foregroundColor) >50 {
+      @if lightness($foregroundColor)>50 {
         color: darken($foregroundColor, 10%) !important;
-      } @else {
+      }
+
+      @else {
         color: lighten($foregroundColor, 10%) !important;
       }
     }
@@ -375,7 +439,7 @@ figure {
   overflow: scroll;
 }
 
-figure > table {
+figure>table {
   width: 100%;
 }
 
@@ -394,8 +458,10 @@ figure {
     text-align: right;
     min-width: 3em;
   }
+
   .code {
     width: 99%;
+
     pre {
       border-bottom-left-radius: 0;
       border-top-left-radius: 0;
@@ -711,3 +777,5 @@ figure {
     display: block !important;
   }
 }
+
+@import 'custom.scss';

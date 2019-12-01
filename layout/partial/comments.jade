@@ -1,3 +1,18 @@
+if theme.valine
+    a#comments
+    #valine-container
+    script.
+        (function(){
+            if(typeof Valine !== 'undefined'){
+                new Valine({
+                    el:'#valine-container',
+                    appId: '#{theme.valine_appid}',
+                    appKey: '#{theme.valine_appkey}',
+                    path: window.location.pathname
+                })
+            }
+        }())
+
 if theme.disqus
     a#comments
     #disqus_thread

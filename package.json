@@ -5,9 +5,10 @@
   "main": "index.js",
   "scripts": {
     "test": "echo 'No tests' && exit",
-    "build": "node-sass raw/scss -o source/css --output-style compressed && postcss source/css -u autoprefixer -r",
+    "build:scss": "dart-sass raw/scss:source/css --no-source-map --style compressed && postcss --no-map source/css -u autoprefixer -r",
+    "build:webpack": "cross-env NODE_ENV=production webpack --config webpack.config.js --progress --display-error-details --colors",
     "scss-compile": "npm run build",
-    "watch": "node-sass -w raw/scss -o source/css"
+    "watch:scss": "dart-sass --watch raw/scss:source/css"
   },
   "repository": {
     "type": "git",
@@ -24,13 +25,30 @@
     "url": "https://github.com/SumiMakito/hexo-theme-typography/issues"
   },
   "homepage": "https://github.com/SumiMakito/hexo-theme-typography/README.md",
-  "devDependencies": {},
+  "devDependencies": {
+    "babel-loader": "^8.0.6",
+    "cross-env": "^6.0.3",
+    "exports-loader": "^0.7.0",
+    "file-loader": "^5.0.2",
+    "webpack": "^4.41.2",
+    "webpack-cli": "^3.3.10"
+  },
   "dependencies": {
-    "scss-compile": "^0.1.7",
-    "yamljs": "^0.3.0",
+    "@babel/cli": "^7.7.4",
+    "@babel/core": "^7.7.4",
+    "@babel/preset-env": "^7.7.4",
     "autoprefixer": "^9.2.0",
-    "node-sass": "^4.10.0",
+    "dart-sass": "^1.23.7",
+    "fastclick": "^1.0.6",
+    "jquery-pjax": "^2.0.1",
+    "lazyload": "^2.0.0-rc.2",
+    "leancloud-storage": "^4.0.0",
+    "nprogress": "^0.2.0",
     "postcss": "^7.0.5",
-    "postcss-cli": "^6.0.0"
+    "postcss-cli": "^6.0.0",
+    "scss-compile": "^0.1.7",
+    "uglify-js": "^3.7.1",
+    "valine": "^1.3.10",
+    "yamljs": "^0.3.0"
   }
 }
