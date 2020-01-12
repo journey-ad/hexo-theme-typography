@@ -15,7 +15,6 @@ $(document).pjax('a:not(.fancybox):not([target="_blank"])', '#stage', {
 
 $(document).on('pjax:start', function () {
   NProgress.start();
-
   cplayer.destroy()
 });
 
