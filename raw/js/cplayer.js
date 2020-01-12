@@ -28,7 +28,7 @@ let cplayer = {
       })
     }
 
-    function loadcplayer() {
+    function loadcplayer(cplayer) {
       if (typeof window.cplayerList === 'undefined') window.cplayerList = {};
       if (typeof window.cplayerList[cplayerId] !== 'undefined') return;
       if (!cplayer.prototype.add163) cplayer.prototype.add163 = async function add163(id) {
@@ -99,10 +99,10 @@ let cplayer = {
       js.addEventListener("load", loadcplayer);
       document.body.appendChild(js);
     } else {
-      loadcplayer();
+      loadcplayer(window.cplayer);
     }
   },
-  destory: function () {
+  destroy: function () {
     for (let cplayer in window.cplayerList) {
       window.cplayerList[cplayer].pause()
       let el = document.querySelector(`#${cplayer}`)
