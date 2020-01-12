@@ -60,7 +60,8 @@ let cplayer = {
         style: `c-player {
                 font-size: 16px !important;
                 position: relative;
-                left: 180px;
+                left: 50%;
+                transform: translateX(-50%);
                 width: auto;
                 max-width: 550px;
                 margin: 30px auto;
