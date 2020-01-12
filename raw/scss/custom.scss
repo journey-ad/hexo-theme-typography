@@ -18,6 +18,9 @@ html::-webkit-scrollbar-thumb:hover {
 body {
   color: #606975;
   font-weight: 400;
+  .site-title * {
+    font-family: 'Noto Serif SC',"HiraMinProN-W6","Source Han Serif CN","Source Han Serif SC","Source Han Serif TC",serif;
+}
 }
 
 .main-container {
