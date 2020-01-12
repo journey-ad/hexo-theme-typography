@@ -20,11 +20,21 @@ body {
   font-weight: 400;
 }
 
-.main-container p {
-  margin: 15px 0 0;
-  font-size: 17px;
-  line-height: 1.7em;
-  letter-spacing: .6px;
+.main-container {
+  p {
+    margin: 15px 0 0;
+    font-size: 17px;
+    line-height: 1.7em;
+    letter-spacing: .6px;
+  }
+
+  video {
+    max-width: 100%;
+  }
+
+  .post-title {
+    font-size: 28px;
+  }
 }
 
 a {
@@ -58,7 +68,9 @@ pre[class*="language-"] {
 }
 
 .image-title {
-  float: right;
+  display: inline-block;
+  width: 100%;
+  text-align: right;
   font-size: 10px;
 }
 
@@ -357,3 +369,113 @@ video::-webkit-media-controls-panel {
 }
 
 @import 'prism-theme.scss';
+
+@media (max-width: 768px) {
+  body {
+    font-size: 15px;
+  }
+
+  h2 {
+    font-size: 24px;
+    margin: 14px 0 8px;
+  }
+
+  h3 {
+    font-size: 20px;
+    margin-top: 10px;
+  }
+
+  li.soc {
+    margin-top: 12px !important;
+  }
+
+  .side-container {
+    padding-top: 30px;
+    padding-bottom: 0;
+  }
+
+  .main-container {
+    padding: 20px 16px;
+
+    a {
+      border-width: 1px;
+    }
+
+    p {
+      margin: 15px 0 0;
+      font-size: 15px;
+      line-height: 1.7em;
+      letter-spacing: 0.3px;
+    }
+
+    li {
+      overflow: scroll;
+    }
+
+    .post-title {
+      font-size: 16px;
+    }
+
+    .archive {
+      .post-title {
+        font-size: 14px;
+      }
+
+      .listing {
+        margin-bottom: 16px;
+        padding-left: 20px;
+      }
+
+
+      .listing-item {
+        margin-bottom: 6px;
+      }
+
+      .ar-date {
+        font-size: 14px;
+      }
+    }
+
+    .post-meta {
+      margin-top: 6px;
+      font-size: 12px;
+      line-height: 1.4em;
+    }
+
+    .post-abstract {
+      font-size: 14px;
+    }
+
+    footer {
+      padding-top: 10px;
+      padding-bottom: 20px;
+
+      p {
+        font-size: 12px;
+        margin-top: 2px;
+      }
+    }
+
+    .about-avatar {
+      right: -20px;
+      top: 40px;
+      transform: scale(0.6);
+    }
+
+    .cplayer-template {
+      width: 100%;
+    }
+  }
+
+  .v .vlist .vcard {
+    padding-top: 0.2em !important;
+
+    .vh {
+      padding-bottom: 0
+    }
+
+    .vquote {
+      padding-left: 0;
+    }
+  }
+}
