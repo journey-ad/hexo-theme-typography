@@ -5,7 +5,7 @@ let cplayer = {
     const cplayerId = elements.id
     const ids = JSON.parse(elements.dataset.ids)
     const autoplay = JSON.parse(elements.dataset.autoplay)
-    const playlist = JSON.parse(elements.dataset.playlist)
+    const playlist = JSON.parse(unescape(elements.dataset.playlist))
 
     let getLyric = id => {
       return new Promise((resolve, reject) => {
@@ -77,6 +77,7 @@ let cplayer = {
                 c-player{
                   font-size: 12px !important;
                   left: auto;
+                  transform: none;
                   width: 100%;
                   margin: 10px auto;
                 }

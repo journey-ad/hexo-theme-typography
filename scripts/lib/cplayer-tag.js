@@ -62,7 +62,7 @@ module.exports = function (args, contents) {
     <div class="cplayer-template"
       id=${JSON.stringify(targetID)}
       data-id=${JSON.stringify(targetID)}
-      data-playlist=${JSON.stringify(resPlaylist)}
+      data-playlist=${escape(JSON.stringify(resPlaylist))}
       data-ids=${JSON.stringify(add163)}
       data-autoplay="${autoplay}"
       style="position: relative"
@@ -140,6 +140,7 @@ module.exports = function (args, contents) {
                       c-player{
                         font-size: 12px !important;
                         left: auto;
+                        transform: none;
                         width: 100%;
                         margin: 10px auto;
                       }
