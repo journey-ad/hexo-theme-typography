@@ -129,6 +129,9 @@ module.exports = function (args, contents) {
                       max-width: 550px;
                       margin: 30px auto;
                     }
+                    c-player .cp-controls{
+                      user-select: none;
+                    }
                     c-player .cp-lyric{
                       width: 100%;
                       margin: 0.41667em 0;
