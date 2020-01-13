@@ -9,6 +9,8 @@ let imageTitle = ()=>{
       img.parentNode.insertBefore(span, img.nextSibling);
   }
   document.querySelectorAll('p img').forEach(function (img, i) {
+      if(img.nextSibling.classList.contains('image-title')) return
+
       if ((img.complete && img.naturalHeight) || img.height) {
           addTitle(img);
       } else {
