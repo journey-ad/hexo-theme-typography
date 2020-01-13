@@ -53,8 +53,6 @@ module.exports = function (args, contents) {
         add163.push(v);
         break;
       default:
-        v.lyric = v.lyric.split('\\n').join('\n')
-        v.sublyric = v.sublyric.split('\\n').join('\n')
         resPlaylist.push(v);
         break;
     }
