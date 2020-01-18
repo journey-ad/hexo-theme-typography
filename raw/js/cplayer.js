@@ -107,10 +107,11 @@ let cplayer = {
                   height: 2.8em;
                   width: 2.8em;
                 }
-                c-player .cp-play-button .cp-play-icon.cp-play-icon-paused {
-                  margin: 0.7875em;
+                c-player .cp-play-button .cp-play-icon{
+                  margin: 0.8em;
                 }
                 c-player .cp-play-button .cp-play-icon.cp-play-icon-paused {
+                  margin: 0.7875em;
                   margin-left: 1em;
                 }
                 c-player .cp-volume-icon {
