@@ -25,7 +25,7 @@ body {
 
 .main-container {
   p {
-    margin: 15px 0 0;
+    margin: 10px 0 0;
     font-size: 17px;
     line-height: 1.7em;
     letter-spacing: .6px;
@@ -36,11 +36,24 @@ body {
   }
 
   .post-title {
-    font-size: 28px;
+    font-size: 24px;
+  }
+
+  .post-meta {
+    font-size: 14px;
   }
 }
 
-a {
+.archive{
+  .post-title {
+    font-size: 17px;
+  }}
+
+.autopagerize_page_element{
+  
+}
+
+a:not[data=""] {
   padding: 4px 2px 2px;
 
   &.headerlink {
@@ -371,7 +384,7 @@ video::-webkit-media-controls-panel {
   /* Modern Browsers */
 }
 
-@import url('https://fonts.googleapis.com/css?family=Noto+Serif+SC&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Noto+Serif+SC:400,700&display=swap&subset=chinese-simplified');
 
 @import 'prism-theme.scss';
 
@@ -390,6 +403,10 @@ video::-webkit-media-controls-panel {
     margin-top: 10px;
   }
 
+  h4{
+    font-size: 16px;
+  }
+
   li.soc {
     margin-top: 12px !important;
   }
@@ -400,7 +417,7 @@ video::-webkit-media-controls-panel {
   }
 
   .main-container {
-    padding: 20px 16px;
+    padding: 4px 16px;
 
     a {
       border-width: 1px;

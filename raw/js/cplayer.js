@@ -29,6 +29,7 @@ let cplayer = {
     }
 
     function loadcplayer(cplayer) {
+      if(!cplayer) return
       if (typeof window.cplayerList === 'undefined') window.cplayerList = {};
       if (typeof window.cplayerList[cplayerId] !== 'undefined') return;
       if (!cplayer.prototype.add163) cplayer.prototype.add163 = async function add163(id) {
