@@ -57,76 +57,7 @@ let cplayer = {
         generateBeforeElement: false,
         deleteElementAfterGenerate: false,
         autoplay: autoplay,
-        zoomOutKana: true,
-        style: `c-player {
-                font-size: 16px !important;
-                position: relative;
-                left: 50%;
-                transform: translateX(-50%);
-                width: auto;
-                max-width: 550px;
-                margin: 30px auto;
-              }
-              c-player .cp-controls{
-                user-select: none;
-              }
-              c-player .cp-lyric{
-                width: 100%;
-                margin: 0.41667em 0;
-              }
-              c-player .cp-play-button .cp-play-icon.cp-play-icon-paused {
-                margin-left: 0.8em;
-              }
-              @media (max-width: 768px) {
-                c-player{
-                  font-size: 12px !important;
-                  left: auto;
-                  transform: none;
-                  width: 100%;
-                  margin: 10px auto;
-                }
-                c-player .cp-mainbody{
-                  min-height: 5.16667em;
-                }
-                c-player .cp-poster{
-                  width: 5.16667em;
-                  height: 5.16667em;
-                }
-                c-player .cp-center-container{
-                  height: 5.16667em;
-                }
-                c-player .cp-play-button, c-player .cp-volume-button, c-player .cp-prev-button, c-player .cp-list-button, c-player .cp-mode-button, c-player .cp-next-button{
-                  width: 1.54167em;
-                  height: 1.54167em;
-                }
-                c-player .cp-icon, c-player .cp-prev-icon, c-player .cp-next-icon, c-player .cp-volume-icon, c-player .cp-random-icon, c-player .cp-single-icon, c-player .cp-loop-icon, c-player .cp-list-icon{
-                  height: 1.54167em;
-                  width: 1.54167em;
-                }
-                c-player .cp-play-button{
-                  height: 2.8em;
-                  width: 2.8em;
-                }
-                c-player .cp-play-button .cp-play-icon{
-                  margin: 0.8em;
-                }
-                c-player .cp-play-button .cp-play-icon.cp-play-icon-paused {
-                  margin: 0.7875em;
-                  margin-left: 1em;
-                }
-                c-player .cp-volume-icon {
-                  width: 1.76667em;
-                }
-                c-player .cp-list-button {
-                  width: 1.54167em;
-                  height: 1.54167em;
-                }
-                c-player .cp-mode-button {
-                  width: 1.54167em;
-                  height: 1.54167em;
-                }
-              }
-              `
+        zoomOutKana: true
       });
 
       ids.forEach(cid => {

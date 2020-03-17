@@ -163,9 +163,9 @@ body {
   overflow: hidden;
   float: left;
 
-  :nth-child(1) {
-    margin-top: 0;
-  }
+  // :nth-child(1) {
+  //   margin-top: 0;
+  // }
 }
 
 .row {
@@ -280,9 +280,9 @@ body {
   font-size: 18px;
 }
 
-.site-title-links a {
-  border-bottom: solid $foregroundColor 2px;
-}
+// .site-title-links a {
+//   border-bottom: solid $foregroundColor 2px;
+// }
 
 .no-margin-left {
   margin-left: 0;
@@ -302,12 +302,6 @@ body {
 
 a {
   color: $foregroundColor;
-  transition: color 0.3s ease 0s, background-color 0.3s ease 0s;
-  -moz-transition: color 0.3s ease 0s, background-color 0.3s ease 0s;
-  -o-transition: color 0.3s ease 0s, background-color 0.3s ease 0s;
-  -webkit-transition: color 0.3s ease 0s, background-color 0.3s ease 0s;
-  border-bottom: solid $foregroundColor 2px;
-  padding-top: 0.2em;
   cursor: pointer;
   cursor: hand;
 
@@ -315,11 +309,20 @@ a {
   &:focus {
     text-decoration: none;
   }
+}
+
+.post-container p a{
+  transition: color 0.3s ease 0s, background-color 0.3s ease 0s;
+  -moz-transition: color 0.3s ease 0s, background-color 0.3s ease 0s;
+  -o-transition: color 0.3s ease 0s, background-color 0.3s ease 0s;
+  -webkit-transition: color 0.3s ease 0s, background-color 0.3s ease 0s;
+  border-bottom: solid #98a3b1 1px;
+  padding-top: 0.2em;
 
   &:hover {
-    color: $backgroundColor !important;
-    background-color: $foregroundColor;
-    border-bottom: solid transparent 2px;
+    color: #fafafa !important;
+    background-color: #898b90;
+    border-bottom: solid transparent 1px;
   }
 
   &:focus {
@@ -330,7 +333,7 @@ a {
 .a-title {
   text-decoration: none;
   background-color: transparent;
-  border-bottom: solid transparent 2px;
+  border-bottom: solid transparent 1px;
 
   &:hover,
   &:focus {
@@ -339,7 +342,7 @@ a {
 }
 
 .current {
-  border-bottom: solid $foregroundColor 3px !important;
+  border-bottom: solid $foregroundColor 2px !important;
 }
 
 .a-mute {
@@ -395,7 +398,7 @@ a {
 }
 
 img {
-  display: block;
+  display: inline-block;
   max-width: 100%;
   height: auto;
 }

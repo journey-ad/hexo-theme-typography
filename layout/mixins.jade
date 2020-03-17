@@ -1,9 +1,9 @@
 mixin make_post(item, is_detail)
     div.post-container
-        p.post-title
-            if is_detail
-                a= item.title
-            else
+        if is_detail
+            h1.post-title= item.title
+        else
+            p.post-title
                 a(href= url_for(item.path))= item.title
         p.post-meta
             span.date.meta-item!=__("posted_at")+"&nbsp;" + date(item.date, 'YYYY-MM-DD')
