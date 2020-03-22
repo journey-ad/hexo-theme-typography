@@ -73,11 +73,6 @@ strong {
   font-family: 'Josefin Sans SemiBold', -apple-system, BlinkMacSystemFont, "Helvetica Neue", "PingFang SC", "'Hiragino Sans GB", STHeiti, "Microsoft Yahei", "Source Han Sans SC", "Noto Sans CJK SC", "WenQuanYi Micro Hei", Arial, Verdana, sans-serif;
 }
 
-code[class*="language-"],
-pre[class*="language-"] {
-  font-size: 13px !important;
-}
-
 @import 'nprogress.scss';
 
 #nprogress .bar {
@@ -195,8 +190,15 @@ a[target="_blank"] img {
   cursor: alias;
 }
 
-.v .vwrap {
-  background: #fff9;
+.v {
+  .vwrap {
+    background: #fff9;
+  }
+
+  code,
+  pre {
+    font-size: 90% !important;
+  }
 }
 
 /*Hide download button for HTML5 audio and video element in chrome*/
@@ -499,6 +501,14 @@ video::-webkit-media-controls-panel {
 
     .vquote {
       padding-left: 0;
+    }
+  }
+
+  .v {
+
+    pre,
+    code {
+      line-height: 1.3;
     }
   }
 }
